@@ -30,6 +30,9 @@ contract MyEpicNFT is ERC721URIStorage{
     string[] secondWords = ["Frontend_dev", "Backend_dev", "Fullstack_dev", "Core_dev", "Architec", "Deginer"];
     string[] thirdWords = ["Java", "Python", "Solidity", "C", "Go", "JavaScript"];
 
+    //Used later to give the users a link to their OpenSea minted NFT! 
+    event NewEpicNFTMinted(address sender, uint256 tokenId);
+
     //Need to pass name of our NFTs token and it's symbol
     constructor() ERC721("SquareNFT", "SQUARE"){
         console.log("NFT contract is here!");
@@ -116,6 +119,9 @@ contract MyEpicNFT is ERC721URIStorage{
         //There wont be two minted NFT with the same Id
         _tokenIds.increment();
         console.log("An NFT w/ ID %s has been minted to %s", newItemId, msg.sender);
+
+        //Used to give the users their link to the minted NFT when the block is already minted!
+        emit NewEpicNFTMinted(msg.sender, newItemId);
     }
 
 
