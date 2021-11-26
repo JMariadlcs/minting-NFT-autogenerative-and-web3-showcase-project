@@ -9,7 +9,7 @@ import "@openzeppelin/contracts/utils/Counters.sol";
 import "hardhat/console.sol";
 
 // We need to import the helper functions from the contract that we copy/pasted.
-import { Base64 } from "artifacts/contracts/libraries/Base64.sol";
+import {Base64} from "./libraries/Base64.sol";
 
 //MyEpicNFT inherits from the imported Smart Contract 'ERC721URISTORAGE
 //Heritance will allow us to use the inherite contract methods

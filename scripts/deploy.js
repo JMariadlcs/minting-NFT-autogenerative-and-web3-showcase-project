@@ -1,4 +1,5 @@
 //File used to compile and deploy our contract ALCHEMY ETHEREUM NETWORK 
+require("@nomiclabs/hardhat-waffle");
 
 const { hexStripZeros } = require("@ethersproject/bytes")
 
